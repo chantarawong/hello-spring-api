@@ -2,9 +2,6 @@ package hello.spring.api.model;
 
 public enum CatType {
 
-  // Enum constants
-  // Enum constants are static and final implicitly
-  // Enum constants are public
   // please list me of cat type
   // 1. Domestic
   // 2. Wild
@@ -25,6 +22,8 @@ public enum CatType {
   // 17. Semi-domestic
   // 18. Semi-wild
   // 19. Semi-tame
+
+  //
   
   DOMESTIC,
   WILD,

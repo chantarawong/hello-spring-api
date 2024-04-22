@@ -10,12 +10,12 @@
 
 const express = require('express');
 // Import math utils
-const math_utils_add = require('math_utils_add');
+const math_utils_add = require('./math_utils_add');
 
 // Import swagger
 const swaggerUi = require('swagger-ui-express');
 const swaggerJsDoc = require('swagger-jsdoc');
-const swaggerConfig = require('swagger-config');
+const swaggerConfig = require('./swagger-config');
 const app = express();
 
 app.use(express.json());

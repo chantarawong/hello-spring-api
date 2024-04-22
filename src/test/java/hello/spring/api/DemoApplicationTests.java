@@ -12,4 +12,13 @@ class DemoApplicationTests {
 	void contextLoads() {
 	}
 
+	//write a test case for the controller	
+	@Test
+	void testHelloController() {
+		HelloController controller = new HelloController();
+		String result = controller.sayHello();
+		assertEquals(result, "Hello World");
+	}
+
+
 }

@@ -12,6 +12,12 @@ const express = require('express');
 // Import math utils
 const math_utils_add = require('./math_utils_add');
 
+//import substract module please  
+//copilot, please import substract module
+const math_utils_substract = require('./math_utils_substract');
+
+
+
 // Import swagger
 const swaggerUi = require('swagger-ui-express');
 const swaggerJsDoc = require('swagger-jsdoc');
@@ -31,12 +37,35 @@ app.listen(3000, () => {
 
 // REQUEST HANDLERS
 
-// Endpoint that adds two numbers
+/** 
+ * @swagger
+ /add:
+ get:
+ *     summary: Use to request the sum of two numbers
+ *     parameters:
+ *       - name: a
+ *         in: query
+ *         description: The first number to add
+ *         required: true
+ *         type: integer
+ *       - name: b
+ *         in: query
+ *         description: The second number to add
+ *         required: true
+ *         type: integer
+ *     responses:
+ *        '200':
+ *           description: Successful response
+*/
 app.get('/add', (req, res) => {
   res.send(math_utils_add(req.query.a, req.query.b).toString());
 });
 
-// Endpoint that raises one number to the power of another
-app.get('/pow', (req, res) => {
-  res.send(math_utils_pow(req.query.a, req.query.b).toString());
+
+
+//copilot, please add http get endpoint to substract two numbers
+app.get('/substract', (req, res) => {
+  res.send(math_utils_substract(req.query.a, req.query.b).toString());
 });
+
+

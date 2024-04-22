@@ -30,8 +30,8 @@ module.exports = swaggerConfig;
 
 /** 
  * @swagger
- * /add:
- *   get:
+ /add:
+ get:
  *     summary: Use to request the sum of two numbers
  *     parameters:
  *       - name: a
@@ -48,3 +48,4 @@ module.exports = swaggerConfig;
  *        '200':
  *           description: Successful response
  */
+

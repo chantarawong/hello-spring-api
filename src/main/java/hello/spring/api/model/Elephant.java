@@ -1,9 +1,9 @@
 package hello.spring.api.model;
 
-import lombok.*;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import lombok.*;
 
 @Getter
 @Setter
@@ -11,6 +11,7 @@ import javax.persistence.Id;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
+
 public class Elephant {
 
     @Id

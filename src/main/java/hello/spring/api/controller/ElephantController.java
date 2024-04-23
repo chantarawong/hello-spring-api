@@ -19,7 +19,7 @@ public class ElephantController {
     @GetMapping("/api/cat/{id}")
     public Elephant getCatById(@PathVariable long id) throws Exception {
         return elephantService.findById(id);
-    } 
+    }
 
 
 }

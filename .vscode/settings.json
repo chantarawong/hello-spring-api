@@ -1,3 +1,5 @@
 {
-  "java.compile.nullAnalysis.mode": "automatic"
+  "java.compile.nullAnalysis.mode": "automatic",
+  "codeQL.createQuery.qlPackLocation": "c:\\Users\\tchant6\\Documents\\GitHub\\hello-spring-api",
+  "java.configuration.updateBuildConfiguration": "interactive"
 }

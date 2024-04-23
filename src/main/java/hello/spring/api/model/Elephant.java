@@ -11,14 +11,11 @@ import javax.persistence.Id;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-
-public class OctoCat {
+public class Elephant {
 
     @Id
     private long id;
 
     private String name;
-
-    private CatType type;
 
 }

@@ -15,8 +15,8 @@ const swaggerConfig = {
     cors: false,
     servers: [
       {
-        // Replace with codespace url if need be. Ex. https://bthomas2622-jubilant-chainsaw-x5pxrw4g55q2996x.github.dev/
-        url: "/",
+        url: 'http://localhost:3000',
+        description: 'Development server',
       },
     ],
   },
@@ -30,9 +30,9 @@ module.exports = swaggerConfig;
 
 /** 
  * @swagger
- /add:
- get:
- *     summary: Use to request the sum of two numbers
+ * /add:
+ * get:
+ *     summary: Use to request the sum of two numbers   
  *     parameters:
  *       - name: a
  *         in: query

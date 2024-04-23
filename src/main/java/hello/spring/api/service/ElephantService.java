@@ -38,7 +38,7 @@ public class ElephantService {
             Elephant e = iElephants.iterator().next();
             e.setSalary(9000);
             return e;
-
+            
         } else {
             throw new ElephantNotFoundException();
         }

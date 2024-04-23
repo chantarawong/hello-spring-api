@@ -26,4 +26,21 @@ public class ElephantService {
         }
         return oElephant.get();
     }
+
+    
+    public Elephant list() throws ElephantNotFoundException {
+
+        Iterable<Elephant> iElephants = elephantRepository.findAll();
+
+         if (iElephants.iterator().hasNext()) {
+
+            //update name of first elephant
+            Elephant e = iElephants.iterator().next();
+            e.setSalary(9000);
+            return e;
+
+        } else {
+            throw new ElephantNotFoundException();
+        }
+    }
 }

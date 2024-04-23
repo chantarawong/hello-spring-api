@@ -19,4 +19,6 @@ public class Elephant {
 
     private String name;
 
+    private int salary;
+
 }

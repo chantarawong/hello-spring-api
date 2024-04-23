@@ -21,14 +21,14 @@ const math_utils_substract = require('./math_utils_substract');
 // Import swagger
 const swaggerUi = require('swagger-ui-express');
 const swaggerJsDoc = require('swagger-jsdoc');
-const swaggerConfig = require('./swagger-config');
+const swaggerConfig = require('./swagger-config.js');
 const app = express();
 
 app.use(express.json());
 
 // Swagger setup
 const specs = swaggerJsDoc(swaggerConfig);
-app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(specs));
+app.use('/swagger', swaggerUi.serve, swaggerUi.setup(specs));
 
 // Start the server
 app.listen(3000, () => {
@@ -39,30 +39,54 @@ app.listen(3000, () => {
 
 /** 
  * @swagger
- /add:
- get:
- *     summary: Use to request the sum of two numbers
- *     parameters:
- *       - name: a
- *         in: query
- *         description: The first number to add
- *         required: true
- *         type: integer
- *       - name: b
- *         in: query
- *         description: The second number to add
- *         required: true
- *         type: integer
- *     responses:
- *        '200':
- *           description: Successful response
-*/
+ * /add:
+ *  get:
+ *    summary: Use to request the sum of two numbers
+ *    parameters:
+ *    - name: a
+ *      in: query
+ *      description: The first number to add
+ *      required: true
+ *      type: integer
+ *    - name: b
+ *      in: query
+ *      description: The second number to add
+ *      required: true
+ *      type: integer
+ * 
+ *    responses:
+ *      200:
+ *        description: Successful response
+ *  
+ *  
+ */
+
 app.get('/add', (req, res) => {
   res.send(math_utils_add(req.query.a, req.query.b).toString());
 });
 
 
 
+/** 
+ * @swagger
+ /add:
+ get:
+ *     summary: Use to request the substract of two numbers
+ *     parameters:
+ *       - name: a
+ *         in: query
+ *         description: The first number to substract
+ *         required: true
+ *         type: integer
+ *       - name: b
+ *         in: query
+ *         description: The second number to substract
+ *         required: true
+ *         type: integer
+ *     responses:
+ *        '200':
+ *           description: Successful response
+*/
 //copilot, please add http get endpoint to substract two numbers
 app.get('/substract', (req, res) => {
   res.send(math_utils_substract(req.query.a, req.query.b).toString());

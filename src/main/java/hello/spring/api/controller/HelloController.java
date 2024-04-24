@@ -14,9 +14,27 @@ public class HelloController {
     return "Hello World with Java Spring Boot - Maven at " + localDateTime.toString();
   }
 
+
+  //copilot please eliminate cross site script below method
+ 
   @GetMapping("/echo")
   public String echo(String word){
-    return "You said: " + word;
+
+    //call sanitizeString method
+    word = this.sanitizeString(word);
+    return "Echo: " + word;
   }
+
+  //create a private method to sanitize string
+  private String sanitizeString(String word){
+
+    //remove a html tag from word
+    word = word.replaceAll("<", "&lt;");
+    word = word.replaceAll(">", "&gt;");
+    
+    return word;
+
+  }
+  
 
 }
